@@ -1,0 +1,108 @@
+html {
+	border-sizing: border-box;
+}
+
+*, *:before, a:after {
+	border-sizing: inherit;
+}
+
+body {
+  width: 200px;
+}
+
+#calc {
+  border-radius: 4px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  border: none;
+  resize: none;
+  font-size: 20px;
+  padding: 10px;
+  color: #2c3e50;
+}
+
+.keyboard {
+  display: flex;
+}
+
+.keyboard .left {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.keyboard .right {
+  width: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.key {
+  border: none;
+  background: #34495e;
+  color: white;
+  font-size: 15px;
+  height: 50px;
+  flex: 1 0 33.333%;
+  order: 99;
+}
+
+.right .key {
+  width: 100%;
+  background: #95a5a6;
+  flex: 1 0 20%;
+}
+
+.key7 {
+  order: 1;
+}
+
+.key8 {
+  order: 2;
+}
+
+.key9 {
+  order: 3;
+}
+
+.key4 {
+  order: 4;
+}
+
+.key5 {
+  order: 5;
+}
+
+.key6 {
+  order: 6;
+}
+
+.key1 {
+  order: 7;
+}
+
+.key2 {
+  order: 8;
+}
+
+.key3 {
+  order: 9;
+}
+
+.key-point {
+  order: 10;
+}
+
+.key0 {
+  order: 11;
+}
+
+.key-equals {
+  order: 12;
+}
