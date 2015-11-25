@@ -1,35 +1,35 @@
 var Vue = require('vue');
 
-var calc = new Vue({
+var vm = new Vue({
   el: '#calc',
 
   data: {
-    items: []
+    entries: []
   },
 
   computed: {
     expression: function() {
-      return this.items.join('');
+      return this.entries.join('');
     }
   },
 
   methods: {
-    addItem: function(item) {
-      this.items.push(item)
+    addEntry: function(entry) {
+      this.entries.push(entry);
     },
 
     clearEntry: function() {
-      this.items.pop()
+      this.entries.pop();
     },
 
     clear: function() {
-      this.items = [];
+      this.entries = [];
     },
 
     calculate: function() {
       var exp = this.expression.replace('÷', '/').replace('×', '*');
       var result = eval(exp);
-      this.items = [result];
+      this.entries = [result];
     }
   }
 })

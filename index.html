@@ -9,35 +9,34 @@
 
   <div id="calc">
 
-    <input type="text" class="box" readonly value="{{ expression }}">
+    <input type="text" class="box" readonly v-model="expression">
 
     <div class="keyboard">
 
       <div class="left">
-        <input type="button" class="key key0" value="0" v-on:click="addItem('0')">
-        <input type="button" class="key key1" value="1" v-on:click="addItem('1')">
-        <input type="button" class="key key2" value="2" v-on:click="addItem('2')">
-        <input type="button" class="key key3" value="3" v-on:click="addItem('3')">
-        <input type="button" class="key key4" value="4" v-on:click="addItem('4')">
-        <input type="button" class="key key5" value="5" v-on:click="addItem('5')">
-        <input type="button" class="key key6" value="6" v-on:click="addItem('6')">
-        <input type="button" class="key key7" value="7" v-on:click="addItem('7')">
-        <input type="button" class="key key8" value="8" v-on:click="addItem('8')">
-        <input type="button" class="key key9" value="9" v-on:click="addItem('9')">
-        <input type="button" class="key key-point" value="." v-on:click="addItem('.')">
+        <input type="button" class="key key0" value="0" v-on:click="addEntry('0')">
+        <input type="button" class="key key1" value="1" v-on:click="addEntry('1')">
+        <input type="button" class="key key2" value="2" v-on:click="addEntry('2')">
+        <input type="button" class="key key3" value="3" v-on:click="addEntry('3')">
+        <input type="button" class="key key4" value="4" v-on:click="addEntry('4')">
+        <input type="button" class="key key5" value="5" v-on:click="addEntry('5')">
+        <input type="button" class="key key6" value="6" v-on:click="addEntry('6')">
+        <input type="button" class="key key7" value="7" v-on:click="addEntry('7')">
+        <input type="button" class="key key8" value="8" v-on:click="addEntry('8')">
+        <input type="button" class="key key9" value="9" v-on:click="addEntry('9')">
+        <input type="button" class="key key-point" value="." v-on:click="addEntry('.')">
         <input type="button" class="key key-equals" value="=" v-on:click="calculate">
       </div>
 
       <div class="right">
         <input type="button" class="key" value="←" v-on:click="clearEntry" v-on:dblclick="clear">
-        <input type="button" class="key" value="÷" v-on:click="addItem('÷')">
-        <input type="button" class="key" value="×" v-on:click="addItem('×')">
-        <input type="button" class="key" value="-" v-on:click="addItem('-')">
-        <input type="button" class="key" value="+" v-on:click="addItem('+')">
+        <input type="button" class="key" value="÷" v-on:click="addEntry('÷')">
+        <input type="button" class="key" value="×" v-on:click="addEntry('×')">
+        <input type="button" class="key" value="-" v-on:click="addEntry('-')">
+        <input type="button" class="key" value="+" v-on:click="addEntry('+')">
       </div>
     </div>
   </div>
-
-<script src="build/app.js"></script>
+  <script type="text/javascript" src="build/app.js"></script>
 </body>
 </html>

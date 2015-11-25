@@ -1,5 +1,5 @@
 {
-  "name": "calculator",
+  "name": "calculator-vuejs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -20,6 +20,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "NODE_ENV=development gulp serve"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "mvtenorio",
+  "license": "MIT"
 }
