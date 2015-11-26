@@ -27,7 +27,7 @@ var vm = new Vue({
     },
 
     calculate: function() {
-      var exp = this.expression.replace('÷', '/').replace('×', '*');
+      var exp = this.expression.replace(/÷/g, '/').replace(/×/g, '*');
       var result = eval(exp);
       this.entries = [result];
     }
