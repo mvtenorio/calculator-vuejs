@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "keyboardjs": "^2.2.0",
     "vue": "^1.0.10"
   },
   "devDependencies": {
