@@ -113,13 +113,13 @@ var keyBindings = [
   }
 ];
 
-keyBindings.forEach(function(element) {
-  keyboardJS.bind(element.keys, null, function(e) {
-    vm.addEntry(element.entry);
+keyBindings.forEach(function(el) {
+  keyboardJS.bind(el.keys, null, function(e) {
+    vm.addEntry(el.entry);
   });
 });
 
-keyboardJS.bind(['backspace', 'del'], null, function(e) {
+keyboardJS.bind(['backspace', 'del'], function(e) {
   vm.clearEntry();
 });
 
