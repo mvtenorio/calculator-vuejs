@@ -11,6 +11,20 @@ var vm = new Vue({
   computed: {
     expression: function() {
       return this.entries.join('');
+    },
+
+    result: function() {
+      var exp = this.expression.replace(/÷/g, '/').replace(/×/g, '*');
+
+      if (!/\d[-+*/]/.test(exp)) return;
+
+      try {
+        var result = eval(exp);
+        return result;
+      }
+      catch(err) {
+        return;
+      }
     }
   },
 
@@ -28,9 +42,10 @@ var vm = new Vue({
     },
 
     calculate: function() {
-      var exp = this.expression.replace(/÷/g, '/').replace(/×/g, '*');
-      var result = eval(exp);
-      this.entries = [result];
+
+      if (this.result) {
+        this.entries = [this.result];
+      }
     }
   }
 });
@@ -97,7 +112,6 @@ var keyBindings = [
     entry: '.'
   }
 ];
-
 
 keyBindings.forEach(function(element) {
   keyboardJS.bind(element.keys, null, function(e) {
