@@ -6,15 +6,12 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  width: 200px;
-}
-
 #calc {
   border-radius: 4px;
   border: 2px solid black;
   display: flex;
   flex-direction: column;
+  width: 200px;
 }
 
 .expression, .result {
@@ -43,12 +40,13 @@ body {
 .keyboard .left {
   display: flex;
   flex-wrap: wrap;
+  flex-basis: 75%;
 }
 
 .keyboard .right {
-  width: 55px;
   display: flex;
   flex-direction: column;
+  flex-basis: 25%;
 }
 
 .key {
@@ -56,7 +54,6 @@ body {
   background: #34495e;
   color: white;
   font-size: 15px;
-  height: 50px;
   flex: 1 1 33.333%;
   order: 99;
 }
@@ -88,3 +85,14 @@ body {
 .key0 { order: 11; }
 
 .key-equals { order: 12; }
+
+@media screen and (max-width: 480px) {
+
+  #calc {
+    width: 100%;
+  }
+
+  .keyboard {
+    height: 400px;
+  }
+}
