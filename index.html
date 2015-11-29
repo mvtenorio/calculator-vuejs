@@ -6,32 +6,7 @@
   <title>Calculator</title>
 </head>
 <body>
-
-  <div id="calc">
-
-    <input type="text" class="expression" readonly autofocus v-model="expression">
-    <input type="text" class="result" readonly v-model="result">
-
-    <div class="keyboard">
-
-      <div class="left">
-        <!-- Repeat from 0 to 9 -->
-        <input type="button" :class="'key' + n + ' key'" :value="n" @click="addEntry(n)"
-          v-for="n in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]">
-
-        <input type="button" class="key key-point" value="." @click="addEntry('.')">
-        <input type="button" class="key key-equals" value="=" @click="calculate">
-      </div>
-
-      <div class="right">
-        <input type="button" class="key" value="←" @click="clearEntry" @dblclick="clear">
-        <input type="button" class="key" value="÷" @click="addEntry('÷')">
-        <input type="button" class="key" value="×" @click="addEntry('×')">
-        <input type="button" class="key" value="-" @click="addEntry('-')">
-        <input type="button" class="key" value="+" @click="addEntry('+')">
-      </div>
-    </div>
-  </div>
+  <div id="app"></div>
   <script src="dist/build.js"></script>
 </body>
 </html>

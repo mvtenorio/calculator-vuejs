@@ -1,9 +1,12 @@
 require('../stylus/style.styl');
+var template = require('../template.jade');
 var Vue = require('vue');
 var keyboardJS = require('keyboardjs');
 
 var vm = new Vue({
-  el: '#calc',
+  el: '#app',
+
+  template: template,
 
   data: {
     entries: []

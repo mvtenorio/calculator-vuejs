@@ -10,9 +10,11 @@
   "devDependencies": {
     "autoprefixer": "^6.1.1",
     "css-loader": "^0.23.0",
+    "jade": "^1.11.0",
     "poststylus": "^0.2.2",
     "style-loader": "^0.13.0",
     "stylus-loader": "^1.4.2",
+    "template-html-loader": "0.0.3",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
   },
