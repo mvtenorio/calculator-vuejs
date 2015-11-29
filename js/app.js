@@ -1,4 +1,4 @@
-require('../css/style.css');
+require('../stylus/style.styl');
 var Vue = require('vue');
 var keyboardJS = require('keyboardjs');
 

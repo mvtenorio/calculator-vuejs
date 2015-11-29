@@ -1,0 +1,95 @@
+html
+  box-sizing border-box
+
+*, *before, *after
+  box-sizing inherit
+
+#calc
+  border-radius 4px
+  border 2px solid black
+  display flex
+  flex-direction column
+  width 200px
+
+.expression, .result
+  border none
+  resize none
+  padding 10px
+  letter-spacing 2px
+  text-align right
+
+.expression
+  font-size 20px
+  color #2c3e50
+
+.result
+  font-size 15px
+  color #95a5a6
+
+.keyboard
+  height 200px
+  display flex
+
+.keyboard .left
+  display flex
+  flex-wrap wrap
+  flex-basis 75%
+
+.keyboard .right
+  display flex
+  flex-direction column
+  flex-basis 25%
+
+.key
+  border none
+  background #34495e
+  color white
+  font-size 15px
+  flex 1 1 33.333%
+  order 99
+
+.right .key
+  background #95a5a6
+
+.key7
+  order 1
+
+.key8
+  order 2
+
+.key9
+  order 3
+
+.key4
+  order 4
+
+.key5
+  order 5
+
+.key6
+  order 6
+
+.key1
+  order 7
+
+.key2
+  order 8
+
+.key3
+  order 9
+
+.key-point
+  order 10
+
+.key0
+  order 11
+
+.key-equals
+  order 12
+
+@media screen and (max-width 480px)
+  #calc
+    width 100%
+
+  .keyboard
+    height 400px

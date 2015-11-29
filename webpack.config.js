@@ -1,5 +1,5 @@
 var webpack = require('webpack')
-var autoprefixer = require('autoprefixer')
+var poststylus = require('poststylus')
 
 module.exports = {
   entry: './js/app.js',
@@ -11,12 +11,14 @@ module.exports = {
   module: {
     loaders: [
       {
-        test:   /\.css$/,
-        loader: "style-loader!css-loader!postcss-loader"
+        test:   /\.styl$/,
+        loader: "style-loader!css-loader!stylus-loader"
       }
     ]
   },
-  postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ]
+  use: [
+    poststylus([ 'autoprefixer'])
+  ]
 }
 
 if (process.env.NODE_ENV === 'production') {
