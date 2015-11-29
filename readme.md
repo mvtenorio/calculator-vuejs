@@ -1,12 +1,7 @@
 ###Calculadora simples usando Vue.js e Flexbox
 
-```npm install -g gulp```
+```npm install```
 
-```npm install -g browser-sync```
+Desenvolvimento: ```npm run dev```
 
-```npm install install```
-
-
-Para desenvolvimento: ```npm start```
-
-Para gerar os arquivos apenas: ```gulp build```
+Build: ```npm run build```
