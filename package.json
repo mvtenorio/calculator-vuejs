@@ -8,18 +8,16 @@
     "vue": "^1.0.10"
   },
   "devDependencies": {
-    "browser-sync": "^2.10.0",
-    "browserify": "^12.0.1",
-    "bs-html-injector": "^3.0.0",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-if": "^2.0.0",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "autoprefixer": "^6.1.1",
+    "css-loader": "^0.23.0",
+    "postcss-loader": "^0.8.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=development gulp serve"
+    "dev": "webpack-dev-server --inline --hot",
+    "build": "export NODE_ENV=production && webpack --progress --hide-modules"
   },
   "author": "mvtenorio",
   "license": "MIT"
