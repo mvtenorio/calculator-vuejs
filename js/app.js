@@ -34,10 +34,12 @@ var vm = new Vue({
 
   methods: {
     addEntry: function(entry) {
+      this.$els.expression.focus();
       this.entries.push(entry);
     },
 
     clearEntry: function() {
+      this.$els.expression.focus();
       this.entries.pop();
     },
 
@@ -46,7 +48,6 @@ var vm = new Vue({
     },
 
     calculate: function() {
-
       if (this.result) {
         this.entries = [this.result];
       }
